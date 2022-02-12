@@ -1,0 +1,230 @@
+.listlesson__content{
+    max-width: 1440px;
+    margin-top: 75px;
+    margin-right: 20px;
+    margin-left: 20px;
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);;
+}
+.listlesson__text{
+    font-size: 36px;
+    font-weight: 400;
+    text-align: left;
+    color: white;
+    width: 260px;
+    height: 180px;
+    text-align: center;
+    margin: 0;
+    border-bottom: 3px solid rgba(255, 255, 255, .3);
+}
+.listlesson__circle{
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(180deg, #E1B579 0%, #B18350 100%);
+    border: 6px solid rgba(255, 255, 255, .7);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+}
+.listlesson__list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+}
+.listlesson__list-container{
+    display: flex;
+    flex-direction: row;
+}
+.listlesson__element{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.listlesson__border{
+    background-color: rgba(255, 255, 255, .3);
+    width: 200px;
+    position: relative;
+    height: 3px;
+    margin-left: 112px;
+    margin-bottom: 50px;
+}
+.listlesson__item{
+    font-size: 34px;
+    width: 650px;
+    font-weight: 400;
+    color: white;
+    margin: 0;
+}
+.listenlesson__number{
+    font-size: 36px;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+    height: 30px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
+}
+.listlesson__line{
+
+}
+.listlesson__line::after{
+    content: '';
+    background: rgba(255, 255, 255, .6);
+    transform: rotate(-13deg);
+    position: absolute;
+    height: 600px;
+    margin-left: 133px;
+    width: 6px;
+}
+.listlesson__borderLine::before{
+    content: '';
+    background: rgba(255, 255, 255, .3);
+    transform: rotate(-13deg);
+    position: absolute;
+    height: 497px;
+    margin-left: 55px;
+    width: 3px;
+    margin-top: 173px;
+}
+@media (max-width: 1280px){
+    .listlesson__item{
+        font-size: 28px;
+    }
+}
+@media (max-width: 1050px){
+    .listlesson__item{
+        font-size: 24px;
+    }
+    .listlesson__text{
+        font-size: 32px;
+    }
+}
+@media (max-width: 940px){
+    .introlesson__text{
+        font-size: 28px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .introlesson__subtitle{
+        font-size: 36px;
+    }
+    .introlesson__title{
+        font-size: 56px;
+        margin-bottom: 25px;
+    }
+}
+@media (max-width: 890px){
+    .listlesson__text{
+        font-size: 28px;
+        width: 150px;
+    }
+    .listlesson__circle{
+        width: 70px;
+        height: 70px;
+    }
+    .listlesson__line::after{
+        height: 500px;
+        transform: rotate(-15deg);
+        margin-left: 125px;
+    }
+    .listlesson__borderLine::before{
+        height: 397px;
+        transform: rotate(-16deg);
+    }
+}
+@media (max-width: 760px){
+    .introlesson__title{
+    font-size: 52px;
+    margin-bottom: 15px;
+    }
+    .introlesson__text{
+        font-size: 24px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .introlesson__subtitle{
+        font-size: 32px;
+    }
+}
+@media (max-width: 756px){
+    .listlesson__borderLine::before{
+        display: none;
+    }
+    .listlesson__line::after{
+        display: none;
+    }
+    .listlesson__circle{
+        margin-left: 0 !important;
+    }
+    .listlesson__content{
+        flex-direction: column;
+    }
+    .listlesson__text{
+        width: 100%;
+        height: auto;
+    }
+    .listlesson__list-container{
+        margin-top: 15px;
+    }
+    .listlesson__item{
+        width: 470px !important;
+    }
+    .listlesson__border{
+        display: none;
+    }
+}
+@media (max-width: 640px){
+    .introLesson__content{
+        margin-top: 25px;
+    }
+    .introlesson__title{
+    font-size: 48px;
+    margin-bottom: 15px;
+    }
+    .introlesson__text{
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .introlesson__subtitle{
+        font-size: 28px;
+    }
+    .listlesson__item{
+        width: 400px !important;
+    }
+}
+@media (max-width: 520px){
+    .listlesson__item{
+        width: 300px !important;
+        font-size: 22px;
+    }
+}
+@media (max-width: 520px){
+    .listlesson__content{
+        margin-top: 25px;
+    }
+}
+@media (max-width: 460px){
+    .listlesson__item{
+        width: 300px !important;
+        font-size: 20px;
+    }
+}
+@media (max-width: 460px){
+    .listlesson__content{
+        margin-top: 15px;
+    }
+    .introlesson__subtitle{
+        font-size: 24px;
+    }
+    .listlesson__item{
+        width: 280px !important;
+        font-size: 22px;
+    }
+    .listlesson__circle{
+        margin-right: 15px;
+    }
+}

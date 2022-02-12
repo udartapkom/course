@@ -1,0 +1,115 @@
+.background__circle-big{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background: rgba(0, 178, 255, .6);
+    position: fixed;
+    filter: blur(50px);
+}
+.background__circle-medium{
+    width: 75px;
+    height: 75px;
+    border-radius: 25px;
+    background: rgba(0, 178, 255, .6);
+    position: fixed;
+    filter: blur(30px);
+}
+.background__circle-small{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: rgba(0, 178, 255, .6);
+    position: fixed;
+    filter: blur(20px);
+}
+.background__blick-medium{
+    top: 5%;
+    left: 75%;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, .6);
+    position: fixed;
+    filter: blur(25px);
+}
+@keyframes move-right {
+    0% {
+        left: 0;
+        top: 0;
+    }
+    25% {
+        left: calc(100% - 100px);
+        top: calc(100% - 100px);
+    }
+    50% {
+        left: calc(100% - 100px);
+        top: 0;
+    }
+    75% {
+        left: 0;
+        top: calc(100% - 100px);
+    }
+    100% {
+        left: 0;
+        top: 0;
+    }
+}
+.move-right{
+ animation: move-right 240s linear infinite;  
+}
+@keyframes orbita {
+    from { 
+        transform: rotate(180deg) translateX(300px) rotate(180deg); 
+    }
+    to { 
+        transform: rotate(540deg) translateX(300px) rotate(540deg); 
+    }
+}
+.orbit {
+    animation: orbita 180s linear infinite;
+}
+@keyframes romb {
+    0% {
+        left: 50%;
+        top: 0;
+    }
+    25% {
+        left: calc(100% - 50px);
+        top: 50%;
+    }
+    50% {
+        left: 50%;
+        top: calc(100% - 50px);
+    }
+    75% {
+        left: 0;
+        top: 50%;
+    }
+    100% {
+        left: 50%;
+        top: 0;
+    }
+}
+.romb {
+    animation: romb 180s linear infinite;
+}
+@keyframes blick {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: .3;
+    }
+    50% {
+        opacity: .5;
+    }
+    75% {
+        opacity: .1;
+    }
+    100% {
+        opacity: .0;
+    }
+}
+.blick {
+    animation: blick 10s linear infinite;
+}

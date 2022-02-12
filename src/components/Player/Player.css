@@ -1,0 +1,71 @@
+.player{
+    width: 550px;
+    height: 120px;
+    background: rgba(196, 196, 196, .65);
+    border: 3px solid rgba(255,255,255,.65);
+    border-radius: 25px;
+    box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, .25);
+    display: flex;
+    z-index: 1;
+}
+.player__button{
+    width: 250px;
+    height: 45px;
+    background: linear-gradient(180deg, #E1B579 0%, #B18350 100%);
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border: 1px solid white;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+    cursor: pointer;
+}
+.player__button:hover{
+    background: linear-gradient(0deg, #E1B579 0%, #B18350 100%);
+}
+.player__info{
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+}
+.player__content{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.player__volume{
+    margin-left: 10px;
+}
+.player__volume-numbers{
+    color: white;
+    margin: 0;
+    padding-left: 10px;
+}
+.player__volume-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+@media (max-width: 520px){
+    .player{
+        width: 450px;
+    }
+}
+@media (max-width: 460px){
+    .player{
+        width: 300px;
+        flex-direction: column;
+        height: 150px;
+    }
+}

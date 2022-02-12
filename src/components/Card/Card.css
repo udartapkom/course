@@ -1,0 +1,223 @@
+.card{
+    width: 320px;
+    height: 440px;
+    border-radius: 25px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(32, 32, 32, .5);
+    border: 3px solid #B18350;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card__graph{
+    height: 210px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.card__column{
+    width: 32px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: #c4c4c4;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, .5);
+}
+.card__column:last-of-type{
+    margin-right: 0;
+}
+.card__block::before{
+    content: '';
+    width: 320px;
+    height: 440px;
+    border-radius: 22px;
+    background: rgba(0, 0, 0, .5);
+    z-index: 1;
+    position: absolute;
+}
+.card__block::after{
+    content: url('../../images/lock.svg');
+    position: absolute;
+    margin-top: 100px;
+}
+.card__column_height_one{
+    height: 45px;
+}
+.card__column_height_two{
+    height: 65px;
+}
+.card__column_height_tree{
+    height: 85px;
+}
+.card__column_height_four{
+    height: 105px;
+}
+.card__column_height_five{
+    height: 125px;
+}
+.card__column_height_six{
+    height: 145px;
+}
+.card__column_height_seven{
+    height: 165px;
+}
+.card__column_color_red{
+    background: red;
+}
+.card__column_color_orange{
+    background: #ffa500;
+}
+.card__column_color_yellow{
+    background: #ffff00;
+}
+.card__column_color_green{
+    background: #008000;
+}
+.card__column_color_light-blue{
+    background: #42aaff;
+}
+.card__column_color_blue{
+    background: blue;
+}
+.card__column_color_violet{
+    background: #8b00ff;
+}
+.card__header{
+    font-size: 36px;
+    color: black;
+    text-align: center;
+    font-weight: 400;
+    margin: 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+.card__header_border_none{
+    border-bottom: none;
+    padding-top: 20px;
+    padding-bottom: 25px;
+}
+.card__button{
+    width: 230px;
+    height: 60px;
+    background: linear-gradient(180deg, #E1B579 0%, #B18350 100%);
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    margin-bottom: 35px;
+}
+.card__button_state_block{
+    background: grey;
+}
+.card__button:hover{
+    background: linear-gradient(0deg, #E1B579 0%, #B18350 100%);
+}
+@media (max-width: 720px){
+    .card{
+    width: 280px;
+    height: 380px;
+    }
+    .card__column_height_one{
+        height: 40px;
+    }
+    .card__column_height_two{
+        height: 57px;
+    }
+    .card__column_height_tree{
+        height: 74px;
+    }
+    .card__column_height_four{
+        height: 91px;
+    }
+    .card__column_height_five{
+        height: 108px;
+    }
+    .card__column_height_six{
+        height: 125px;
+    }
+    .card__column_height_seven{
+        height: 142px;
+    }
+    .card__column{
+        width: 27px;
+        margin-top: 25px;
+    }
+    .card__header{
+        font-size: 28px;
+    }
+    .card__button{
+        margin-bottom: 10px;
+    }
+    .card__block::before{
+        width: 280px;
+        height: 380px;
+    }
+}
+@media (max-width: 640px){
+    .card{
+    width: 260px;
+    height: 360px;
+    }
+    .card__column{
+        margin-top: 15px;
+        margin-right: 8px;
+    }
+    .card__header{
+        font-size: 28px;
+        padding-bottom: 10px;
+    }
+    .card__block::before{
+        width: 260px;
+        height: 360px;
+    }
+    .card__block::after{
+        margin-top: 80px;
+    }
+}
+@media (max-width: 580px){
+    .card{
+    width: 300px;
+    height: 400px;
+    }
+    .card__column{
+        margin-top: 15px;
+        margin-right: 10px;
+    }
+    .card__column_height_one{
+        height: 45px;
+    }
+    .card__column_height_two{
+        height: 65px;
+    }
+    .card__column_height_tree{
+        height: 85px;
+    }
+    .card__column_height_four{
+        height: 105px;
+    }
+    .card__column_height_five{
+        height: 125px;
+    }
+    .card__column_height_six{
+        height: 145px;
+    }
+    .card__column_height_seven{
+        height: 165px;
+    }
+    .card__header{
+        font-size: 34px;
+    }
+    .card__block::before{
+        width: 300px;
+        height: 400px;
+    }
+}

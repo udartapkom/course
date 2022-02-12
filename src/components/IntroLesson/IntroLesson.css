@@ -1,0 +1,29 @@
+.introLesson__content{
+    max-width: 1440px;
+    margin-top: 75px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.introlesson__title{
+    font-size: 64px;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 45px;
+}
+.introlesson__subtitle{
+    font-size: 42px;
+    text-align: center;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 0;
+}
+.introlesson__text{
+    font-size: 36px;
+    font-weight: 400;
+    text-align: left;
+    color: white;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
