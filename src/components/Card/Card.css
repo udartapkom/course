@@ -61,29 +61,31 @@
 .card__column_height_seven{
     height: 165px;
 }
+
+/* заказчик не захотел цветной график. Чтобы его вернуть, нужно лишь указать цвета из названий классов */
 .card__column_color_red{
-    background: red;
+    background: linear-gradient(180deg, #E1B579 0%, #B18350 100%);
 }
 .card__column_color_orange{
-    background: #ffa500;
+    background: linear-gradient(180deg, #E1B579 0%, #B18350 100%);
 }
 .card__column_color_yellow{
-    background: #ffff00;
+    background: linear-gradient(180deg, #E1B579 0%, #B18350 100%);
 }
 .card__column_color_green{
-    background: #008000;
+    background: linear-gradient(180deg, #E1B579 0%, #B18350 100%);
 }
 .card__column_color_light-blue{
-    background: #42aaff;
+    background: linear-gradient(180deg, #E1B579 0%, #B18350 100%);
 }
 .card__column_color_blue{
-    background: blue;
+    background: linear-gradient(180deg, #E1B579 0%, #B18350 100%);
 }
 .card__column_color_violet{
-    background: #8b00ff;
+    background: linear-gradient(180deg, #E1B579 0%, #B18350 100%);
 }
 .card__header{
-    font-size: 36px;
+    font-size: 30px;
     color: black;
     text-align: center;
     font-weight: 400;
@@ -93,8 +95,8 @@
 }
 .card__header_border_none{
     border-bottom: none;
-    padding-top: 20px;
-    padding-bottom: 25px;
+    padding-top: 15px;
+    padding-bottom: 20px;
 }
 .card__button{
     width: 230px;
