@@ -3,10 +3,11 @@ import { useAudioPlayer } from "react-use-audio-player";
 
 function Player(props) {
   const [playerVolume, setPlayerVolume] = useState("1");
-
-  const { volume, togglePlayPause, ready, loading, playing } = useAudioPlayer({
+// loading,
+  const { volume, togglePlayPause, ready,  playing } = useAudioPlayer({
     src: props.file,
     format: "mp3",
+    html5: true,
     autoplay: false,
     onend: () => console.log("Трек окончен!"),
   });
@@ -16,10 +17,10 @@ function Player(props) {
   }
   return (
     <>
-    {loading ? <div className="player__info">Идёт загрузка</div> : null}
+    {/* {loading ? <div className="player__info">Идёт загрузка</div> : null} */}
       <div className="player">
         <div className="player__content">
-          {!ready && !loading ? <div className="player__info">Нет файла</div> : null}
+          {/* {!ready && !loading ? <div className="player__info">Нет файла</div> : null} */}
           {playing ? (
             <div className="player__info">Воспроизведение</div>
           ) : (

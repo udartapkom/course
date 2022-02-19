@@ -1,9 +1,21 @@
 import React, { useState } from "react";
-
 import Form from "../../components/Form/Form";
-//import arrow from "../../images/rightArrow.svg";
 import Background from "../../components/Background/Background";
+//import useFormWithValidation from '../../components/Validation/Validation';
+
 function Login(props) {
+
+const { onSubmitLogin } = props;
+
+//Не осталось времени на доработку валидации...
+/* const {
+  values,
+  errors,
+  isValidForm,
+  handleInputChange,
+
+} = useFormWithValidation({})
+ */
   //Хуки состояния формы
   const [login, setLogin] = useState("");
   const [password, setPass] = useState("");
@@ -23,7 +35,8 @@ function Login(props) {
   //Выполняем при нажатии кнопки входа
   function handleSubmit(event) {
     event.preventDefault();
-    console.log("Нажата кнопка");
+    onSubmitLogin({login, password});
+    cleanForm()
   }
   //Формируем страницу входа. Передаём параметры формы и непосредственно поля
   return (
@@ -48,12 +61,13 @@ function Login(props) {
               onChange={loginInput}
               value={login}
             />
+             {/* <label htmlFor="login" className="Form__label Form__label_type_error">{errors.login}</label> */}
           </label>
 
           <label>
             <input
-              type="password"
               id="password"
+              type="password"
               name="password"
               className="login-page__item"
               maxLength="20"

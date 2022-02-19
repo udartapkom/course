@@ -10,6 +10,7 @@ function Task(props) {
       listOne,
       link,
       file,
+      image
     } = props;
   return (
     <>
@@ -28,9 +29,15 @@ function Task(props) {
           </ul>
         ) : null}
         <p className="task__text">{taskTwo}</p>
-         <a className={`meditation__link ${!file ? 'task__link-disable' : null }`} 
-         href={file} download="image.png">{link}</a>
-      </section>
+     
+      
+      <div className="task__bonus">
+      <a className= "task__link  task__link_position_center" href={image}>< img className="task__image" src={image} ></img></a> 
+        <a className={`task__link ${!file ? 'task__link-disable' : null }`} href={file} download="image.png"> {link} </a>
+      </div>
+
+
+             </section>
     </>
   );
 }

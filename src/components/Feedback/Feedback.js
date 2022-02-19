@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import Form from "../Form/Form";
 
 function Feedback(props) {
-  const { lessonOnePublic } = props;
+  const { 
+    lessonOnePublic,
+    sendHistory
+   } = props;
   const [feedback, setFeedback] = useState("");
 
   function cleanForm() {
@@ -15,7 +18,7 @@ function Feedback(props) {
   //Выполняем при нажатии кнопки входа
   function handleSubmit(event) {
     event.preventDefault();
-    console.log("Нажата кнопка");
+    sendHistory(feedback)
   }
   return (
     <>

@@ -44,6 +44,13 @@
 .login-page__button:hover{
     background: linear-gradient(0deg, #E1B579 0%, #B18350 100%);
 }
+.login-page_state_admin{
+    align-items: end;
+    padding-top: 50px;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
 @media (max-width: 460px){
     .login-page__item{
         width: 280px;

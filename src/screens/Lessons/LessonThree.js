@@ -8,6 +8,7 @@ import Meditation from "../../components/Meditation/Meditation";
 import HomeButton from "../../components/HomeButton/HomeButton";
 import Background from "../../components/Background/Background";
 
+import meditationAudioLink from "../../sounds/meditation_three.mp3";
 import file from "../../sounds/meditation_three.mp3";
 import fileImage from "../../images/milleoner.png";
 import fire from "../../documents/fire.pdf";
@@ -35,10 +36,28 @@ function LessonThree(props){
         bonusHeadTwo,
         bonusTwo
       } = props.lessonThree;
+      const { handleSaveProfile, saveHistory } = props;
+      React.useEffect(() => {
+        const updateCards = JSON.parse(localStorage.getItem("initialCards"))
+        updateCards.dayFour = false
+        localStorage.setItem("initialCards", JSON.stringify(updateCards))
+        handleSaveProfile(updateCards)
+    },[] )
 
+    function sendHistory(text){
+      const updateCards = JSON.parse(localStorage.getItem("currentUser"))
+      const toSend = {
+          login: updateCards.login,
+          lesson: 'День третий',
+          text: text
+      }
+      saveHistory(toSend)
+    }
     return(
 <>
-<Header />
+<Header 
+{...props}
+/>
       <main className="main__content">
         <Background />
       <IntroLesson
@@ -52,6 +71,7 @@ function LessonThree(props){
         />
         <Feedback 
           lessonOnePublic={lessonTwoPublic} 
+          sendHistory={sendHistory}
         />
         <Task
           taskOneHead={taskOneHead}
@@ -68,7 +88,8 @@ function LessonThree(props){
         <Meditation
           meditationTitle={meditationTitle}
           meditation={meditation}
-          link={file}
+          file={file}
+          link={meditationAudioLink}
         />
         <Task
           taskOneHead={bonusHead}
@@ -77,6 +98,7 @@ function LessonThree(props){
           listOne={false}
           link={"9 законов успеха в жизни"}
           file={fileImage}
+          image={fileImage}
         />
         <Task
           taskOneHead={bonusHeadTwo}

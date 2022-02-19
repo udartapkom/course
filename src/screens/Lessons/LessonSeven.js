@@ -6,6 +6,7 @@ import Meditation from "../../components/Meditation/Meditation";
 import HomeButton from "../../components/HomeButton/HomeButton";
 import Background from "../../components/Background/Background";
 
+import meditationAudioLink from "../../sounds/meditation_seven.mp3";
 import file from "../../sounds/meditation_seven.mp3";
 import insight from "../../images/insight.png";
 
@@ -21,7 +22,9 @@ function LessonSeven(props) {
   } = props.lessonSeven;
   return (
     <>
-      <Header />
+      <Header 
+      {...props}
+      />
       <main className="main__content">
       <Background />
         <IntroLesson
@@ -32,13 +35,16 @@ function LessonSeven(props) {
         <Meditation
           meditationTitle={meditationTitle}
           meditation={meditation}
-          link={file} />
+          link={meditationAudioLink} 
+          file={file}
+          />
         <Task
           taskOneHead={bonusHead}
           bonus={"Бонус"}
           taskOne={bonusText}
           file={insight}
           link={"9 законов успеха в жизни"}
+          image={insight}
         />
         <HomeButton />
       </main>

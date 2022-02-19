@@ -8,6 +8,7 @@ import Meditation from "../../components/Meditation/Meditation";
 import HomeButton from "../../components/HomeButton/HomeButton";
 import Background from "../../components/Background/Background";
 
+import meditationAudioLink from "../../sounds/meditation_five.mp3";
 import file from "../../sounds/meditation_five.mp3";
 import thanks from "../../documents/thanks.pdf";
 import check from "../../documents/check.pdf";
@@ -40,10 +41,29 @@ function LessonFive(props) {
     bonusHeadTwo,
     bonusTextTwo,
   } = props.lessonFive;
+  const { handleSaveProfile, saveHistory } = props;
+  React.useEffect(() => {
+    const updateCards = JSON.parse(localStorage.getItem("initialCards"))
+    updateCards.daySix = false
+    localStorage.setItem("initialCards", JSON.stringify(updateCards))
+    handleSaveProfile(updateCards)
+  },[] )
+  
+  function sendHistory(text){
+    const updateCards = JSON.parse(localStorage.getItem("currentUser"))
+    const toSend = {
+        login: updateCards.login,
+        lesson: 'День пятый',
+        text: text
+    }
+    saveHistory(toSend)
+  }
 
   return (
     <>
-      <Header />
+      <Header 
+      {...props}
+      />
       <main className="main__content">
         <Background />
         <Task
@@ -75,6 +95,7 @@ function LessonFive(props) {
           list={list} />
         <Feedback 
           lessonOnePublic={lessonTwoPublic} 
+          sendHistory={sendHistory}
         />
         <Task 
           taskOneHead={tenGarbageTitle} 
@@ -82,12 +103,16 @@ function LessonFive(props) {
         />
         <Meditation 
           meditationTitle={meditationTitle}
-          meditation={meditation} link={file} />
+          meditation={meditation} 
+          link={meditationAudioLink} 
+          file={file}
+          />
         <Task
           bonus={bonusHead}
           taskOne={bonusText}
           file={fiveQuestion}
           link={"9 законов успеха в жизни"}
+          image={fiveQuestion}
         />
         <Task
           bonus={bonusHeadTwo}

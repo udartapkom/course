@@ -38,10 +38,29 @@ function LessonTwo(props) {
     bonusHeadTwo,
     bonusTwo,
   } = props.lessonTwo;
+  const { handleSaveProfile,saveHistory } = props;
+  React.useEffect(() => {
+    const updateCards = JSON.parse(localStorage.getItem("initialCards"))
+    updateCards.dayThree = false
+    localStorage.setItem("initialCards", JSON.stringify(updateCards))
+    handleSaveProfile(updateCards)
+},[] )
+
+function sendHistory(text){
+  const updateCards = JSON.parse(localStorage.getItem("currentUser"))
+  const toSend = {
+      login: updateCards.login,
+      lesson: 'День второй',
+      text: text
+  }
+  saveHistory(toSend)
+}
 
   return (
     <>
-      <Header />
+      <Header 
+      {...props}
+      />
       <main className="main__content">
         <IntroLesson
           lessonOneHeader={lessonTwoHeader}
@@ -54,7 +73,8 @@ function LessonTwo(props) {
           list={list} 
         />
         <Feedback 
-          lessonOnePublic={lessonTwoPublic} 
+          lessonOnePublic={lessonTwoPublic}
+          sendHistory={sendHistory} 
         />
         <Task
           taskOneHead={taskOfDay}
@@ -85,6 +105,7 @@ function LessonTwo(props) {
           listOne={false}
           link={"9 законов успеха в жизни"}
           file={fileImage}
+          image={fileImage}
         />
         <Task
           taskOneHead={bonusHeadTwo}

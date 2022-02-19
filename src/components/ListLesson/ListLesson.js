@@ -31,7 +31,7 @@ function ListLesson(props) {
           <div className="listlesson__borderLine"></div>
           <ul className="listlesson__list">
             {list.map((item) => (
-              <li className="listlesson__element">
+              <li className="listlesson__element"  key={item._id}>
                 {/* расчёт смещения элементов списка на 30рх вправо, в зависимости от количества элементов в массиве + расчёт номера элемента списка */}
                 <div className="listlesson__circle" style={{ marginLeft: `${(i = i + 30)}px` }}>
                   <p className="listenlesson__number">{`0${n++}`}</p>

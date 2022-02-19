@@ -16,4 +16,7 @@
 @import url("./components/Meditation/Meditation.css");
 @import url("./components/Player/Player.css");
 @import url("./components/HomeButton/HomeButton.css");
+@import url("./components/Popup/Popup.css");
+@import url("./screens/Register/Register.css");
+@import url("./components/MobileNavigation/MobileNavigation.css");
 

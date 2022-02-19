@@ -8,7 +8,9 @@ function Intro(props) {
   return (
     <>
       <section className="intro">
-        <Header />
+        <Header 
+        {...props}
+        />
         <div className="intro__content">
           <h2 className="intro__title">{DATA.HEADERS.INTRO}</h2>
           <p className="intro__text">{DATA.TEXTS.INTROPARTONE}</p>
